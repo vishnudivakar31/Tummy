@@ -1,2 +1,7 @@
 # Tummy
-An App for people to post recipes whether it is experimental or artisitic or authentic. Users can provide available incredients and cooking time to find appropriate recipes from App's bucket and rate the recipe.
+An App for people to post recipes whether it is experimental, artisitic or authentic.
+
+App will help users in:
+	- Finding receipes based on given ingredients.
+	- Rating recipes
+	- Have comments, stories, discussions, host events and much more.
