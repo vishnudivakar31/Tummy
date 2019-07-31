@@ -1,4 +1,4 @@
-package com.wanderingThinker.Tummy.appdatatypes;
+package com.wanderingThinker.Tummy.supportingdocuments;
 
 public class TummyDatatypes {
     public enum Roles {

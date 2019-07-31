@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
-import com.wanderingThinker.Tummy.appdatatypes.TummyDatatypes.Roles;
+import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.Roles;
 import java.util.List;
 
 @Document(collection = "tummy-user")
