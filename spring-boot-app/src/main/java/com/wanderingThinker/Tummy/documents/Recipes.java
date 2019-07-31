@@ -20,8 +20,9 @@ public class Recipes {
     private String title;
     private Long cookingTime;
     private Integer likes;
-    private Integer dislikes;
+    private List<String> likesList;
     private Boolean isAbusive;
+    private List<String> abusiveReportList;
     private List<Comments> comments;
     private List<Ingrident> ingridents;
     private Float avgRatings;
@@ -34,16 +35,18 @@ public class Recipes {
     public Recipes() {
     }
 
-    public Recipes(String id, String username, String title, Long cookingTime, Integer likes, Integer dislikes,
-                   Boolean isAbusive, List<Comments> comments, List<Ingrident> ingridents, Float avgRatings,
-                   List<Rating> ratings, List<String> steps, String cuisine, Date posted_date, Date updated_date) {
+    public Recipes(String id, String username, String title, Long cookingTime, Integer likes, List<String> likesList,
+                   Boolean isAbusive, List<String> abusiveReportList, List<Comments> comments,
+                   List<Ingrident> ingridents, Float avgRatings, List<Rating> ratings, List<String> steps,
+                   String cuisine, Date posted_date, Date updated_date) {
         this.id = id;
         this.username = username;
         this.title = title;
         this.cookingTime = cookingTime;
         this.likes = likes;
-        this.dislikes = dislikes;
+        this.likesList = likesList;
         this.isAbusive = isAbusive;
+        this.abusiveReportList = abusiveReportList;
         this.comments = comments;
         this.ingridents = ingridents;
         this.avgRatings = avgRatings;
@@ -92,14 +95,6 @@ public class Recipes {
 
     public void setLikes(Integer likes) {
         this.likes = likes;
-    }
-
-    public Integer getDislikes() {
-        return dislikes;
-    }
-
-    public void setDislikes(Integer dislikes) {
-        this.dislikes = dislikes;
     }
 
     public Boolean getAbusive() {
@@ -172,5 +167,21 @@ public class Recipes {
 
     public void setUpdated_date(Date updated_date) {
         this.updated_date = updated_date;
+    }
+
+    public List<String> getLikesList() {
+        return likesList;
+    }
+
+    public void setLikesList(List<String> likesList) {
+        this.likesList = likesList;
+    }
+
+    public List<String> getAbusiveReportList() {
+        return abusiveReportList;
+    }
+
+    public void setAbusiveReportList(List<String> abusiveReportList) {
+        this.abusiveReportList = abusiveReportList;
     }
 }
