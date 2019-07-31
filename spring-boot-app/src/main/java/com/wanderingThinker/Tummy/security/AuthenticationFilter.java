@@ -33,7 +33,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
             TummyUser user = new ObjectMapper().readValue(request.getInputStream(), TummyUser.class);
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
-                            user.getUserName(),
+                            user.getUsername(),
                             user.getPassword(),
                             new ArrayList<>()
                     )

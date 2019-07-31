@@ -32,7 +32,7 @@ public class TummyUserController {
     @PostMapping("/sign-up")
     public ResponseEntity<Map<String, String>> signUp(@RequestBody TummyUser user) {
         Map<String, String> msg = new HashMap<>();
-        if(tummyUserRepository.findByUsername(user.getUserName()) != null) {
+        if(tummyUserRepository.findByUsername(user.getUsername()) != null) {
             msg.put(MESSAGE, "username already exists.");
             return new ResponseEntity<>(msg, HttpStatus.OK);
         }
