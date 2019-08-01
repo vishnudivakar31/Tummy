@@ -16,13 +16,8 @@ public class Request {
 
     private String username;
     private String requestedTo;
-
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date requestedTime;
-
-    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date updatedTime;
-
     private RequestType requestType;
     private String recipeId;
     private RequestStatus requestStatus;

@@ -19,4 +19,10 @@ public class TummyDatatypes {
         UPDATED,
         CLOSED
     }
+
+    public enum NotificationStatus {
+        REQUESTED,
+        ACCEPTED,
+        DENIED
+    }
 }
