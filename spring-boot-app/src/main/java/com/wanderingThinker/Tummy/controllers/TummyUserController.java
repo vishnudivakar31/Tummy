@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/tummy/users")
 public class TummyUserController {
 
     private TummyUserRepository tummyUserRepository;
