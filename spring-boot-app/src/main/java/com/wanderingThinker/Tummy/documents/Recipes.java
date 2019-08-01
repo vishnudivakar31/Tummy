@@ -23,6 +23,7 @@ public class Recipes {
     private List<String> likesList;
     private Boolean isAbusive;
     private List<String> abusiveReportList;
+    private Integer commentsCount;
     private List<Comments> comments;
     private List<Ingrident> ingridents;
     private Float avgRatings;
@@ -36,7 +37,7 @@ public class Recipes {
     }
 
     public Recipes(String id, String username, String title, Long cookingTime, Integer likes, List<String> likesList,
-                   Boolean isAbusive, List<String> abusiveReportList, List<Comments> comments,
+                   Boolean isAbusive, List<String> abusiveReportList, Integer commentsCount, List<Comments> comments,
                    List<Ingrident> ingridents, Float avgRatings, List<Rating> ratings, List<String> steps,
                    String cuisine, Date posted_date, Date updated_date) {
         this.id = id;
@@ -47,6 +48,7 @@ public class Recipes {
         this.likesList = likesList;
         this.isAbusive = isAbusive;
         this.abusiveReportList = abusiveReportList;
+        this.commentsCount = commentsCount;
         this.comments = comments;
         this.ingridents = ingridents;
         this.avgRatings = avgRatings;
@@ -183,5 +185,13 @@ public class Recipes {
 
     public void setAbusiveReportList(List<String> abusiveReportList) {
         this.abusiveReportList = abusiveReportList;
+    }
+
+    public Integer getCommentsCount() {
+        return commentsCount;
+    }
+
+    public void setCommentsCount(Integer commentsCount) {
+        this.commentsCount = commentsCount;
     }
 }

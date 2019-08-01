@@ -1,6 +1,7 @@
 package com.wanderingThinker.Tummy.services;
 
 import com.wanderingThinker.Tummy.documents.Recipes;
+import com.wanderingThinker.Tummy.supportingdocuments.Comments;
 import com.wanderingThinker.Tummy.supportingdocuments.Rating;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
 
@@ -17,4 +18,6 @@ public interface RecipeService {
     Recipes postRating(String id, Rating rating) throws TummyException;
     Recipes deleteRating(String username, String id) throws TummyException;
     Recipes reportAbuse(String username, String id) throws TummyException;
+    Recipes postComment(String id, Comments comments) throws TummyException;
+    Recipes clearAbuse(String username, String id) throws TummyException;
 }

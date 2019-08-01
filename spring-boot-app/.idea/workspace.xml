@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd4eac3e-7cca-4541-ba19-4e28f6db6505" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/TummyException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -26,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="129">
+              <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,34 +33,29 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Rating.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4352#4353#0" expanded="true" />
-                <element signature="e#4384#4385#0" expanded="true" />
-                <element signature="e#4440#4441#0" expanded="true" />
-                <element signature="e#4482#4483#0" expanded="true" />
-                <element signature="e#4419#4420#0" expanded="true" />
-                <element signature="e#4459#4460#0" expanded="true" />
-                <element signature="e#4531#4532#0" expanded="true" />
-                <element signature="e#4589#4590#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#349#350#0" expanded="true" />
+                <element signature="e#397#398#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#498#499#0" expanded="true" />
+                <element signature="e#541#542#0" expanded="true" />
+                <element signature="e#577#578#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
+            <state relative-caret-position="450">
               <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-              <folding>
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -71,8 +63,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+            <state relative-caret-position="315">
+              <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,15 +85,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/TummyUser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="132" column="58" selection-start-line="132" selection-start-column="58" selection-end-line="132" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1332#1333#0" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/TummyDatatypes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -134,11 +142,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Rating.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/repositories/RecipesRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/TummyException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -162,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,7 +261,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -350,7 +358,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,13 +398,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/TummyDatatypes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -483,16 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/TummyUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/repositories/TummyUserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -534,23 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Rating.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding>
-            <element signature="e#318#319#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#577#578#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/repositories/RecipesRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -568,10 +542,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="189" column="39" selection-start-line="189" selection-start-column="39" selection-end-line="189" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
+            <element signature="e#4459#4460#0" expanded="true" />
+            <element signature="e#4531#4532#0" expanded="true" />
+            <element signature="e#4589#4590#0" expanded="true" />
+            <element signature="e#4771#4772#0" expanded="true" />
+            <element signature="e#4830#4831#0" expanded="true" />
+            <element signature="e#4880#4881#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Rating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#349#350#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/TummyUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="73" selection-start-line="8" selection-start-column="73" selection-end-line="8" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/TummyDatatypes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="74" selection-start-line="18" selection-start-column="74" selection-end-line="18" selection-end-column="74" />
+        <state relative-caret-position="315">
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="143" column="31" selection-start-line="143" selection-start-column="31" selection-end-line="143" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -580,51 +619,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/services/RecipeServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="132" column="58" selection-start-line="132" selection-start-column="58" selection-end-line="132" selection-end-column="58" />
+        <state relative-caret-position="99">
+          <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1332#1333#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/controllers/RecipeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/documents/Recipes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4352#4353#0" expanded="true" />
-            <element signature="e#4384#4385#0" expanded="true" />
-            <element signature="e#4440#4441#0" expanded="true" />
-            <element signature="e#4482#4483#0" expanded="true" />
-            <element signature="e#4419#4420#0" expanded="true" />
-            <element signature="e#4459#4460#0" expanded="true" />
-            <element signature="e#4531#4532#0" expanded="true" />
-            <element signature="e#4589#4590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/wanderingThinker/Tummy/supportingdocuments/Comments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
-          <folding>
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
           </folding>
         </state>
       </provider>

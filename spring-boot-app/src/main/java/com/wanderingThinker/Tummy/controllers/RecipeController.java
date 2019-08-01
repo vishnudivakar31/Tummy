@@ -141,4 +141,30 @@ public class RecipeController {
         }
     }
 
+    @GetMapping("/abusive/{id}/clear")
+    public ResponseEntity<Object> clearAbuse(Principal principal, @PathVariable("id") String id) {
+        try {
+            Recipes recipes = recipeService.clearAbuse(principal.getName(), id);
+            return new ResponseEntity<>(recipes, HttpStatus.OK);
+        } catch(Exception e) {
+            Map<String, String> msg = new HashMap<>();
+            msg.put("msg", e.getMessage());
+            return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @PostMapping("/comments/{id}")
+    public ResponseEntity<Object> postComments(Principal principal, @PathVariable("id") String id, @RequestBody Comments comments) {
+        comments.setUsername(principal.getName());
+        comments.setCommentedTime(new Date(System.currentTimeMillis()));
+        try {
+            Recipes recipes = recipeService.postComment(id, comments);
+            return new ResponseEntity<>(recipes, HttpStatus.OK);
+        } catch(Exception e) {
+            Map<String, String> msg = new HashMap<>();
+            msg.put("msg", e.getMessage());
+            return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
