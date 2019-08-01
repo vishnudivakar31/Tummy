@@ -1,8 +1,12 @@
 package com.wanderingThinker.Tummy.services;
 
 import com.wanderingThinker.Tummy.documents.Recipes;
+import com.wanderingThinker.Tummy.documents.TummyUser;
 import com.wanderingThinker.Tummy.repositories.RecipesRepository;
+import com.wanderingThinker.Tummy.repositories.TummyUserRepository;
+import com.wanderingThinker.Tummy.supportingdocuments.Comments;
 import com.wanderingThinker.Tummy.supportingdocuments.Rating;
+import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -21,6 +25,9 @@ public class RecipeServiceImpl implements RecipeService {
     @Autowired
     private RecipesRepository recipesRepository;
 
+    @Autowired
+    private TummyUserRepository tummyUserRepository;
+
     private void calculateRatings(Recipes recipes) {
         if(recipes.getRatings() != null && recipes.getRatings().size() > 0) {
             Float ratings = recipes.getRatings().stream().map(i -> i.getRating()).reduce(0f, Float::sum);
@@ -28,8 +35,14 @@ public class RecipeServiceImpl implements RecipeService {
         }
     }
 
+    private void findIsAbusive(Recipes recipes) {
+        Boolean recipeStatus = recipes.getAbusiveReportList() != null && recipes.getAbusiveReportList().size() > 0;
+        recipes.setAbusive(recipeStatus);
+    }
+
     public void postRecipe(Recipes recipes) {
         calculateRatings(recipes);
+        findIsAbusive(recipes);
         recipes.setPosted_date(new Date(System.currentTimeMillis()));
         recipes.setUpdated_date(new Date(System.currentTimeMillis()));
         recipesRepository.save(recipes);
@@ -46,6 +59,7 @@ public class RecipeServiceImpl implements RecipeService {
 
     public void updateRecipe(Recipes recipes) {
         calculateRatings(recipes);
+        findIsAbusive(recipes);
         recipes.setUpdated_date(new Date(System.currentTimeMillis()));
         recipesRepository.save(recipes);
     }
@@ -135,5 +149,43 @@ public class RecipeServiceImpl implements RecipeService {
             return recipes;
         }
         throw new TummyException("recipe not found.");
+    }
+
+    @Override
+    public Recipes postComment(String id, Comments comments) throws TummyException {
+        Optional<Recipes> optionalRecipes = recipesRepository.findById(id);
+        if(optionalRecipes.isPresent()) {
+            Recipes recipes = optionalRecipes.get();
+            List<Comments> commentsList = recipes.getComments() != null ? recipes.getComments() : new ArrayList<>();
+            comments.setCommentedTime(new Date(System.currentTimeMillis()));
+            commentsList.add(comments);
+            recipes.setComments(commentsList);
+            recipes.setCommentsCount(commentsList.size());
+            recipesRepository.save(recipes);
+            return recipes;
+        }
+        throw new TummyException("recipe not found.");
+    }
+
+    @Override
+    public Recipes clearAbuse(String username, String id) throws TummyException {
+        TummyUser tummyUser = tummyUserRepository.findByUsername(username);
+        if(tummyUser != null) {
+            if(tummyUser.getRoles().contains(TummyDatatypes.Roles.ADMIN) ||
+                    tummyUser.getRoles().contains(TummyDatatypes.Roles.GROUP_LEADER)) {
+                Optional<Recipes> optionalRecipes = recipesRepository.findById(id);
+                if(optionalRecipes.isPresent()) {
+                    Recipes recipes = optionalRecipes.get();
+                    recipes.setAbusive(false);
+                    recipes.setAbusiveReportList(new ArrayList<>());
+                    recipesRepository.save(recipes);
+                    return recipes;
+                }
+                throw new TummyException("recipe not found.");
+
+            }
+            throw new TummyException("user does not have admin privileges");
+        }
+        throw new TummyException("user not found.");
     }
 }
