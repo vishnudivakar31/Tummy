@@ -21,6 +21,10 @@ public class TummyCircle {
     public TummyCircle() {
     }
 
+    public TummyCircle(String username) {
+        this.username = username;
+    }
+
     public TummyCircle(String id, String username, List<Friend> friends) {
         this.id = id;
         this.username = username;

@@ -66,9 +66,9 @@ public class NotificationController {
 
     @GetMapping("/{id}/{action}")
     public ResponseEntity<Object> actOnNotification(Principal principal, @PathVariable String id,
-                                                    @PathVariable NotificationStatus notificationStatus) {
+                                                    @PathVariable("action") NotificationStatus action) {
         try {
-            Notifications notification = notificationService.actionNotification(id, notificationStatus);
+            Notifications notification = notificationService.actionNotification(id, action);
             return new ResponseEntity<>(notification, HttpStatus.INTERNAL_SERVER_ERROR);
         } catch(Exception e) {
             Map<String, String> msg = new HashMap<>();

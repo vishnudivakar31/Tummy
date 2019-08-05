@@ -3,7 +3,6 @@ package com.wanderingThinker.Tummy.documents;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.NotificationStatus;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.RequestType;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
