@@ -4,10 +4,7 @@ import com.wanderingThinker.Tummy.documents.Recipes;
 import com.wanderingThinker.Tummy.documents.TummyUser;
 import com.wanderingThinker.Tummy.repositories.RecipesRepository;
 import com.wanderingThinker.Tummy.repositories.TummyUserRepository;
-import com.wanderingThinker.Tummy.supportingdocuments.Comments;
-import com.wanderingThinker.Tummy.supportingdocuments.Rating;
-import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes;
-import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
+import com.wanderingThinker.Tummy.supportingdocuments.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
@@ -187,5 +184,18 @@ public class RecipeServiceImpl implements RecipeService {
             throw new TummyException("user does not have admin privileges");
         }
         throw new TummyException("user not found.");
+    }
+
+    @Override
+    public List<Recipes> findFriendsRecipes(List<Friend> friends, Integer page) {
+        List<String> usernames = friends
+                                .stream()
+                                .map(i -> i.getUsername())
+                                .collect(Collectors.toList());
+        List<Recipes> recipes = recipesRepository
+                                .findByUsernameIn(usernames,
+                                        PageRequest.of(page, 30, Sort.Direction.DESC, "updated_date"));
+        recipes.removeIf(i -> i.getAbusive() == true);
+        return recipes;
     }
 }

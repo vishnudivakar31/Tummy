@@ -16,4 +16,6 @@ public interface RecipesRepository extends PagingAndSortingRepository<Recipes, S
     List<Recipes> findByCookingTime(Long cookingTime);
 
     void deleteByUsername(String username);
+
+    List<Recipes> findByUsernameIn(List<String> usernames, Pageable pageable);
 }
