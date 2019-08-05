@@ -13,7 +13,7 @@ import java.security.Principal;
 import java.util.*;
 
 @RestController
-@RequestMapping("/recipe")
+@RequestMapping("/tummy/recipe")
 public class RecipeController {
 
     @Autowired
