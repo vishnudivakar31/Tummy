@@ -5,7 +5,6 @@ import com.wanderingThinker.Tummy.documents.Request;
 import com.wanderingThinker.Tummy.documents.TummyCircle;
 import com.wanderingThinker.Tummy.repositories.NotificationRepository;
 import com.wanderingThinker.Tummy.supportingdocuments.Friend;
-import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.NotificationStatus;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,6 @@ import java.util.stream.Collectors;
 
 import static com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.NotificationStatus.ACCEPTED;
 import static com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.NotificationStatus.REQUESTED;
-import static com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.RequestStatus.CLOSED;
 
 @Service
 public class NotificationServiceImpl implements NotificationService {

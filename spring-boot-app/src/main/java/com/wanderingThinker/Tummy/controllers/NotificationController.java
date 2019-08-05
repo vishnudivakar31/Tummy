@@ -3,6 +3,8 @@ package com.wanderingThinker.Tummy.controllers;
 import com.wanderingThinker.Tummy.documents.Notifications;
 import com.wanderingThinker.Tummy.services.NotificationService;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyDatatypes.NotificationStatus;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,22 +19,27 @@ import java.util.Map;
 @RequestMapping("/tummy/notifications")
 public class NotificationController {
 
+    Logger logger = LoggerFactory.getLogger(NotificationController.class);
+
     @Autowired
     private NotificationService notificationService;
 
     @GetMapping()
     public List<Notifications> getAllNotifications(Principal principal) {
+        logger.debug("request for get all notification initiated.");
         return notificationService.getAllNotifications(principal.getName());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Object> getNotification(Principal principal, @PathVariable String id) {
+        logger.debug("request for getting a notification by id initiated.");
         try {
             Notifications notifications = notificationService.getNotificationById(id);
             return new ResponseEntity<>(notifications, HttpStatus.OK);
         } catch(Exception e) {
             Map<String, String> msg = new HashMap<>();
             msg.put("msg", e.getMessage());
+            logger.error("Exception in NotificationController::getNotification(): " + e.getMessage());
             return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -47,6 +54,7 @@ public class NotificationController {
             return new ResponseEntity<>(msg, HttpStatus.OK);
         } catch(Exception e) {
             msg.put("msg", e.getMessage());
+            logger.error("Exception in NotificationController::postNotification(): " + e.getMessage());
             return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -60,6 +68,7 @@ public class NotificationController {
             return new ResponseEntity<>(msg, HttpStatus.OK);
         } catch(Exception e) {
             msg.put("msg", e.getMessage());
+            logger.error("Exception in NotificationController::updateNotification(): " + e.getMessage());
             return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
@@ -73,6 +82,7 @@ public class NotificationController {
         } catch(Exception e) {
             Map<String, String> msg = new HashMap<>();
             msg.put("msg", e.getMessage());
+            logger.error("Exception in NotificationController::actOnNotification(): " + e.getMessage());
             return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
