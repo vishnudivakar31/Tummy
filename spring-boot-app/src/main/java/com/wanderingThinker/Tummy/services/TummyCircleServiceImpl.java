@@ -1,21 +1,27 @@
 package com.wanderingThinker.Tummy.services;
 
 import com.wanderingThinker.Tummy.documents.TummyCircle;
+import com.wanderingThinker.Tummy.documents.TummyUser;
 import com.wanderingThinker.Tummy.repositories.TummyCircleRepository;
 import com.wanderingThinker.Tummy.supportingdocuments.Friend;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class TummyCircleServiceImpl implements TummyCircleService {
 
     @Autowired
     private TummyCircleRepository tummyCircleRepository;
+
+    @Autowired
+    private TummyUserService tummyUserService;
 
     @Override
     public Optional<TummyCircle> findByUsername(String username) {
@@ -87,5 +93,20 @@ public class TummyCircleServiceImpl implements TummyCircleService {
             tummyCircleRepository.save(secondaryCircle);
         }
         return true;
+    }
+
+    @Override
+    public List<TummyUser> findUsers(String username, Integer page) {
+        List<TummyUser> result = new ArrayList<>();
+
+        Optional<TummyCircle> optionalTummyCircle = tummyCircleRepository.findByUsername(username);
+        List<Friend> friends = optionalTummyCircle.isPresent() ? optionalTummyCircle.get().getFriends()
+                : new ArrayList<>();
+        Page<TummyUser> users = tummyUserService.findAllUsers(page);
+
+        List<String> friendUsernames = friends.stream().map(i -> i.getUsername()).collect(Collectors.toList());
+        users.forEach(result::add);
+        result.removeIf(i -> friendUsernames.contains(i.getUsername()) || i.getUsername().equals(username));
+        return result;
     }
 }
