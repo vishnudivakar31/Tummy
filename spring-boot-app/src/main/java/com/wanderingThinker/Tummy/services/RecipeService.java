@@ -1,10 +1,7 @@
 package com.wanderingThinker.Tummy.services;
 
 import com.wanderingThinker.Tummy.documents.Recipes;
-import com.wanderingThinker.Tummy.supportingdocuments.Comments;
-import com.wanderingThinker.Tummy.supportingdocuments.Friend;
-import com.wanderingThinker.Tummy.supportingdocuments.Rating;
-import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
+import com.wanderingThinker.Tummy.supportingdocuments.*;
 
 import java.util.List;
 
@@ -22,4 +19,6 @@ public interface RecipeService {
     Recipes postComment(String id, Comments comments) throws TummyException;
     Recipes clearAbuse(String username, String id) throws TummyException;
     List<Recipes> findFriendsRecipes(List<Friend> friends, Integer page);
+
+    List<Recipes> findRecipeByIngridents(List<String> ingridents, Integer page, String cuisine, Long cookingTime);
 }

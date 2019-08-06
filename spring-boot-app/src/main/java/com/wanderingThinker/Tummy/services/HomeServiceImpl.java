@@ -20,9 +20,18 @@ public class HomeServiceImpl implements HomeService {
     @Autowired
     private RecipeService recipeService;
 
+    @Autowired
+    private TummyUserService tummyUserService;
+
     @Override
     public List<Recipes> getHomeContents(String username, Integer page) {
         List<Friend> friends = tummyCircleService.findAllFriends(username);
         return recipeService.findFriendsRecipes(friends, page);
     }
+
+    @Override
+    public List<Recipes> getRecipesByIngridents(List<String> ingridents, Integer page, String cuisine, Long cookingTime) {
+        return recipeService.findRecipeByIngridents(ingridents, page, cuisine, cookingTime);
+    }
+
 }

@@ -198,4 +198,30 @@ public class RecipeServiceImpl implements RecipeService {
         recipes.removeIf(i -> i.getAbusive() == true);
         return recipes;
     }
+
+    @Override
+    public List<Recipes> findRecipeByIngridents(List<String> ingridents, Integer page, String cuisine, Long cookingTime) {
+        List<Recipes> recipes = new ArrayList<>();
+        if(cuisine != null) {
+            recipes = recipesRepository.findByCuisine(cuisine,
+                    PageRequest.of(page, 30, Sort.Direction.DESC, "updated_date"));
+        } else {
+            recipesRepository
+                .findAll(PageRequest.of(page, 30, Sort.Direction.DESC, "updated_date"))
+                .forEach(recipes::add);
+        }
+        if(ingridents != null) {
+            recipes = recipes
+                    .parallelStream()
+                    .filter(i -> !i.getAbusive() && i.getIngridents()
+                            .stream()
+                            .map(j -> j.getName().toLowerCase())
+                            .collect(Collectors.toList()).containsAll(ingridents)
+                    ).collect(Collectors.toList());
+        }
+        if(cookingTime != null) {
+            recipes.removeIf(i -> i.getCookingTime() > cookingTime);
+        }
+        return recipes;
+    }
 }
