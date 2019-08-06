@@ -1,5 +1,6 @@
 package com.wanderingThinker.Tummy.controllers;
 
+import com.wanderingThinker.Tummy.documents.TummyUser;
 import com.wanderingThinker.Tummy.services.TummyCircleService;
 import com.wanderingThinker.Tummy.supportingdocuments.Friend;
 import org.slf4j.Logger;
@@ -81,6 +82,19 @@ public class CircleController {
         } catch (Exception e) {
             msg.put("msg", e.getMessage());
             logger.error("Exception in CircleController::unblock(): " + e.getMessage());
+            return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("/new")
+    public ResponseEntity<Object> findUsers(Principal principal, @RequestParam Integer page) {
+        Map<String, String> msg = new HashMap<>();
+        try {
+            List<TummyUser> users = tummyCircleService.findUsers(principal.getName(), page);
+            return new ResponseEntity<>(users, HttpStatus.OK);
+        } catch (Exception e) {
+            msg.put("msg", e.getMessage());
+            logger.error("Exception in CircleController::findUsers(): " + e.getMessage());
             return new ResponseEntity<>(msg, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }

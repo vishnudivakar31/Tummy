@@ -1,6 +1,7 @@
 package com.wanderingThinker.Tummy.services;
 
 import com.wanderingThinker.Tummy.documents.TummyCircle;
+import com.wanderingThinker.Tummy.documents.TummyUser;
 import com.wanderingThinker.Tummy.supportingdocuments.Friend;
 import com.wanderingThinker.Tummy.supportingdocuments.TummyException;
 
@@ -20,4 +21,5 @@ public interface TummyCircleService {
 
     Boolean setBlock(String name, String friendName, Boolean block);
 
+    List<TummyUser> findUsers(String name, Integer page);
 }
