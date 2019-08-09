@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Tummy</string>
+    <string name="app_name_tagline">fill it in with magic</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="nationality">Nationality</string>
+    <string name="dob">Date of Birth</string>
+    <string name="confirm">Confirm</string>
+    <string name="pwd_not_matching">Passwords are not matching</string>
+    <string name="mandatory_fields">All fields are mandatory</string>
+</resources>
