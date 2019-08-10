@@ -5,6 +5,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="loading">loading...</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
@@ -13,4 +14,6 @@
     <string name="confirm">Confirm</string>
     <string name="pwd_not_matching">Passwords are not matching</string>
     <string name="mandatory_fields">All fields are mandatory</string>
+    <string name="server_busy">Server is busy, please try again.</string>
+    <string name="successful_signup">Welcome to tummy.</string>
 </resources>
