@@ -16,4 +16,11 @@
     <string name="mandatory_fields">All fields are mandatory</string>
     <string name="server_busy">Server is busy, please try again.</string>
     <string name="successful_signup">Welcome to tummy.</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="unauthorizeduser">Unauthorized user or user not found</string>
+    <string name="preference_name">com.wanderingThinkter.tummy.prefs2019</string>
+    <string name="jwt_token">jwttoken</string>
 </resources>

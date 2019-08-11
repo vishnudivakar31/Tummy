@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
 import com.wanderingthinkter.tummy.api.RestApi
 import com.wanderingthinkter.tummy.api.Routes
-import com.wanderingthinkter.tummy.appconstants.CustomDataTypes
+import com.wanderingthinkter.tummy.appfactorylib.CustomDataTypes
 import com.wanderingthinkter.tummy.entities.TummyUser
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import org.json.JSONObject

@@ -1,6 +1,6 @@
 package com.wanderingthinkter.tummy.entities
 
-import com.wanderingthinkter.tummy.appconstants.CustomDataTypes.*
+import com.wanderingthinkter.tummy.appfactorylib.CustomDataTypes.*
 
 data class TummyUser(val username: String, val firstName: String, val lastName: String, val password: String
                      , val roles: Set<Roles>, val dob: String, val nationality: String) {

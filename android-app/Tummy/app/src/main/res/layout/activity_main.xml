@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editText3" android:layout_marginTop="8dp"
+            android:id="@+id/passwordTxt" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/loginEmail"
             app:layout_constraintStart_toStartOf="@+id/loginEmail"
             android:fontFamily="@font/almendra"
@@ -63,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/loginButton" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/editText3" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordTxt" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="20dp" android:layout_marginRight="20dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="20dp"
             android:fontFamily="@font/almendra"
@@ -78,4 +78,14 @@
             app:layout_constraintTop_toBottomOf="@+id/loginButton" android:layout_marginTop="50dp"
             android:textSize="18sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark"
             app:fontFamily="@font/almendra"/>
+    <ProgressBar
+            style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large.Inverse"
+            android:layout_width="37dp"
+            android:layout_height="34dp"
+            android:id="@+id/loadingWid"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/appName" android:visibility="invisible"
+            android:progressDrawable="@color/colorPrimary" android:scrollbarThumbHorizontal="@color/colorPrimary"
+            android:scrollbarThumbVertical="@color/colorPrimary"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

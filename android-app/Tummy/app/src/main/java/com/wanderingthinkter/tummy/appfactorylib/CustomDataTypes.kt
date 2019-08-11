@@ -1,4 +1,4 @@
-package com.wanderingthinkter.tummy.appconstants
+package com.wanderingthinkter.tummy.appfactorylib
 
 class CustomDataTypes {
     enum class Roles {
