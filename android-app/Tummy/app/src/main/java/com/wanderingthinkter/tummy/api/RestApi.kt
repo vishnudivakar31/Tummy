@@ -5,8 +5,10 @@ import com.android.volley.NetworkResponse
 import com.android.volley.Response
 import com.android.volley.Response.*
 import com.android.volley.toolbox.HttpHeaderParser
+import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import org.json.JSONArray
 import org.json.JSONObject
 import java.nio.charset.Charset
 
@@ -35,6 +37,7 @@ class MetaRequest(
 
 }
 
+
 class RestApi(val ctx: Context) {
 
     private val baseUrl = "http://tummy.us-east-2.elasticbeanstalk.com"
@@ -44,6 +47,12 @@ class RestApi(val ctx: Context) {
     fun request(method: Int, url: String, body: JSONObject, listenerFun: Listener<JSONObject>,
                 errorListenerFun: ErrorListener) {
         val requestObj = MetaRequest(method, "$baseUrl$url", body, listenerFun, errorListenerFun)
+        requestQueue.add(requestObj)
+    }
+
+    fun requestArray(method: Int, url: String, body: JSONArray, listenerFun: Listener<JSONArray>,
+                     errorListenerFun: ErrorListener) {
+        val requestObj = JsonArrayRequest(method, "$baseUrl$url", body, listenerFun, errorListenerFun)
         requestQueue.add(requestObj)
     }
 

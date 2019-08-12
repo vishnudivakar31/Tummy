@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" android:id="@+id/homeFragmentLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" tools:srcCompat="@tools:sample/avatars"
+                android:id="@+id/recipeImageTxt" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="2dp" android:layout_marginBottom="2dp"
+                android:contentDescription="@string/title_recipe" app:layout_constraintVertical_bias="0.28"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="102dp"
+                android:layout_height="39dp" android:id="@+id/recipeTitleTxt" android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/recipeImageTxt" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="2dp"
+                android:layout_marginLeft="20dp" android:layout_marginStart="20dp" android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" android:textColor="@android:color/black" android:textSize="24sp"
+                android:textStyle="bold" app:fontFamily="@font/almendra" app:layout_constraintVertical_bias="1.0"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recipeCusineTxt" android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/recipeTitleTxt" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="8dp"
+                android:textSize="18sp" android:textColor="@android:color/black"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/likesTxt" android:layout_marginTop="2dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/recipeImageTxt"
+                app:layout_constraintStart_toStartOf="@+id/recipeImageTxt"
+                android:textSize="12sp" android:textColor="@android:color/black"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingsTxt" app:layout_constraintEnd_toEndOf="@+id/recipeImageTxt"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="2dp"
+                app:layout_constraintBottom_toTopOf="@+id/recipeImageTxt" android:textSize="12sp"
+                android:textColor="@android:color/black"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
