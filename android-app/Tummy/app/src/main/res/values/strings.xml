@@ -25,7 +25,6 @@
     <string name="unauthorizeduser">Unauthorized user or user not found</string>
     <string name="preference_name">com.wanderingThinkter.tummy.prefs2019</string>
     <string name="jwt_token">jwttoken</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_recipes">No recipes to show</string>
+    <string name="refresh_label">Refreshing feeds.</string>
 </resources>
