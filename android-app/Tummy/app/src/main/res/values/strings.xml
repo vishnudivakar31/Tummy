@@ -27,4 +27,8 @@
     <string name="jwt_token">jwttoken</string>
     <string name="no_recipes">No recipes to show</string>
     <string name="refresh_label">Refreshing feeds.</string>
+    <string name="filters_text">Filters</string>
+    <string name="cuisine_text">Cuisine</string>
+    <string name="ingredients_txt">Ingredients</string>
+    <string name="add_ingredients">Add more ingredients</string>
 </resources>

@@ -55,12 +55,12 @@ class HomeFragment : Fragment() {
         var restApi = context?.let { RestApi(it) }
         val listenerFun = Listener<JSONArray> { response ->
             if(response.length() > 0) {
-                emptyTxt.visibility = View.GONE
+                emptyTxt?.visibility = View.GONE
                 val recipeList = gson.fromJson(response.toString(), Array<Recipe>::class.java).toList()
                 adapter = HomeFragmentAdapter(recipeList)
                 homeRecyclerView.adapter = adapter
             } else {
-                emptyTxt.visibility = View.VISIBLE
+                emptyTxt?.visibility = View.VISIBLE
             }
         }
         val errorFun = Response.ErrorListener {

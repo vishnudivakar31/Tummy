@@ -15,6 +15,7 @@ class HomeActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_recipes -> {
+                replaceFrag(RecipeFinderFragment())
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {

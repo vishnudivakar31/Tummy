@@ -17,18 +17,18 @@
             android:text="@string/no_recipes"
             android:layout_width="1843dp"
             android:layout_height="158dp" android:id="@+id/emptyTxt" android:textColor="@android:color/black"
-            tools:visibility="gone" android:textSize="20sp" android:gravity="center"
+            tools:visibility="gone" android:textSize="14sp" android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintVertical_bias="0.41"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:src="@android:drawable/ic_menu_rotate"
+            android:src="@drawable/refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:clickable="true" android:id="@+id/refreshButton" app:backgroundTint="@color/colorPrimary"
             app:rippleColor="@android:color/white"
             android:layout_marginEnd="20dp" app:layout_constraintEnd_toEndOf="@+id/homeRecyclerView"
             android:layout_marginRight="20dp" android:layout_marginBottom="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/homeRecyclerView"/>
+            app:layout_constraintBottom_toBottomOf="@+id/homeRecyclerView" app:maxImageSize="30dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
